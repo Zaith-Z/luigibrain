@@ -1,0 +1,7 @@
+supermario:
+  enabled: true
+  version: 1.4.4
+  values:
+    pink: true # true/false
+    gameMode: "pride" # ""/"pride"
+    season: "winter" # "summer"/"winter"
