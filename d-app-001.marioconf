@@ -1,3 +1,7 @@
+
+appproject:
+  create: true
+
 supermario:
   enabled: true
   version: 1.4.4
@@ -5,3 +9,126 @@ supermario:
     pink: true # true/false
     gameMode: "pride" # ""/"pride"
     season: "winter" # "summer"/"winter"
+
+rabbitmq:
+  enabled: false
+  version: 1.1.7
+  
+redis:
+  enabled: false
+  version: 1.0.13
+
+redises:
+
+valkey:
+  enabled: false
+  version: 1.0.7
+
+valkeys: []
+
+x509CertificateExporter:
+  enabled: false
+  version: 1.0.16
+  prometheusRules:
+    alertExtraLabels: {}
+
+snapscheduler:
+  enabled: false
+
+trident:
+  enabled: false
+  svm: ""
+  path: ""
+  version: 100.2406.1
+  operatorImage: "ncr.sky.nhn.no/dockerhub/netapp/trident-operator:24.06.1"
+  tridentAutosupportImage: "ncr.sky.nhn.no/dockerhub/netapp/trident-autosupport:24.06"
+  tridentAutosupportImageTag: "24.06"
+  tridentImage: "ncr.sky.nhn.no/dockerhub/netapp/trident:24.06.1"
+  snapscheduler:
+    version: 3.4.0
+
+linkerd:
+  enabled: false
+  crds: 1.8.0
+  controlplane: 1.16.8
+  viz: 30.12.8
+
+jaeger:
+  enabled: false
+  version: 0.73.1
+  prod: false
+
+k8sapibridge:
+  enabled: false
+  version: 0.2.5
+
+reloader:
+  enabled: false
+  version: 2.0.1
+
+externalSecretsOperator:
+  enabled: false
+  version: 1.0.0
+
+sealedSecrets:
+  enabled: false
+  version: 1.0.5
+
+prometheusJsonExporter:
+  enabled: false
+  version: 0.13.0
+  values:
+    image:
+      repository: "ncr.sky.nhn.no/quayio/prometheuscommunity/json-exporter"
+    config:
+      configuration: {}
+      structuredConfiguration: {}
+    serviceMonitor: {}
+
+elasticsearchExporter:
+  enabled: false
+  version: 1.0.22
+  es:
+    uri: http://elasticsearch-master.elasticsearch:9200
+  env: 
+    ES_USERNAME: {}
+  extraEnvSecrets: {}
+    # ES_PASSWORD:
+    #   secret: {}
+    #   key: {}
+
+nyancat:
+  enabled: false
+  version: 0.1.1
+
+cloudnativepg:
+  enabled: false
+  version: 1.0.1
+
+postgresCluster:
+  enabled: false
+  version: 1.0.12
+
+k6Operator:
+  enabled: false
+  version: 3.16.0
+
+opensearch:
+  enabled: false
+  version: 1.0.0
+
+secretsStoreCSIDriver:
+  enabled: false
+  version: 0.0.1
+
+openbaoCSIProvider:
+  enabled: false
+  version: 0.0.1
+
+mariaDBOperator:
+  enabled: false
+  version: 0.0.1
+
+mariaDBCluster:
+  enabled: false
+  version: 0.0.4
